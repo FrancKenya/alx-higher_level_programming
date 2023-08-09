@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+
+if ord('a') <= ord(c) <= ord('z'):
+    return True
+else:
+    return False
