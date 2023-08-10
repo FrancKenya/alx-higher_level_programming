@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 for values in range(ord('Z'), ord('A'), -1):
-    print(chr(values), end=" ")
+    print("{}".format(chr(values )), end=" ")
     if values % 2 == 0:
         values += 32
     else:
