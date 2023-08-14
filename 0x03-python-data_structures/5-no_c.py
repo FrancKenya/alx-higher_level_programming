@@ -4,9 +4,8 @@
 
 
 def no_c(my_string):
-    new = " "
-    for c in my_string:
-        if c != 'C' and c != 'c':
-            new += c
-
-    return (new)
+    new = []
+    for char in my_string:
+        if char != 'C' and char != 'c':
+            new.append(char)
+    return ("".join(new))
