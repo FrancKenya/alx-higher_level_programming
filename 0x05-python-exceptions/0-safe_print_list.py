@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """ prints x elements of a list """
 
 
