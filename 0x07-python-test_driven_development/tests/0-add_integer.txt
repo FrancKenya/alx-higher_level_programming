@@ -1,0 +1,61 @@
+# Usage of the O-add_integer.py
+#Usage: add_integer. returns the sum of the two integer
+
+>>> from ..0-add_integer import add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(1, -2)
+-1
+# working with floating point numbers
+>>> add_integer(5.2, 4.8)
+10
+# handling a int and a floating number
+>>> add_integer(4.5, -2)
+2
+# casting floats in to ints
+>>> add_integer(-5.9, -0.2)
+-5
+>>> add_integer(5.9, 0.2)
+5
+# handling the default second argument, 98
+>>> add_integer(1)
+99
+# handling non floats and integers(non numbers)
+>>> add_integer("name", 4)
+Traceback (most recent call last)
+TypeError: a must be an integer
+
+>>> add_integer(4, "name")
+Traceback (most recent call last)
+TypeError: b must be an integer
+
+>>> add_integer(4.2, None)
+Traceback (most recent call last)
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last)
+TypeError: a and b must be an integer
+
+# handling NaN
+>>> add_integer(2, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+# handling both arguments not integer
+>>> add_integer("name", "residence")
+Traceback (most recent call last):
+TypeError: a  and b must be an integer
+
+# handling overflow
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float inf to integer
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float inf to integer
