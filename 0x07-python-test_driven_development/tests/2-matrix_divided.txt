@@ -1,0 +1,85 @@
+# Usage of the say_my_name function
+# Usage:
+"""
+say_my_name. Exception is that first_name must be a string or last_name must be a string
+Returns a new matrix that is a copy of the parameter
+``matrix`` with all elements divided by ``div``.
+"""
+# importing matrix_divided
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+... [6, 9, 12],
+... [15, 18, 21]
+... ] 
+
+>>> print(matrix_divided(matrix, 3))
+[[2.0, 3.0, 4.0], [5.0, 6.0, 7.0]]
+
+# Rounding of the quotients
+ 
+>>> matrix = [
+... [4, 5, 6],
+... [7, 8, 9]
+... ] 
+>>> print(matrix_divided(matrix, 3))
+[[1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
+
+# Note the initial matrix does not change
+
+>>> print(matrix)
+[[4, 5, 6], [7, 8, 9]]
+
+# Handling floating point numbers
+
+>>> matrix = [
+... [4.4, -5.5, 6.6],
+... [7.7, 8.8, -9.9]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.47, -1.83, 2.2], [2.57, 2.93, -3.3]]
+
+# Combinining both floats and integers
+
+>>> matrix = [
+... [3, 4, -5.5, 6.6],
+... [-7.00, 8, 9.99, 10]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 1.33, -1.83, 2.2], [-2.33, 2.67, 3.33, 3.33]]
+
+# Handling undivisible elements
+
+>>> matrix = [
+... [4, 5, 6],
+... [7, 8, 9]
+... ]
+>>> print(matrix_divided(matrix, "name"))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> print(matrix_divided(matrix, None))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+# Handling cases where div is not a non zero
+
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+# When there is an empty lists of list we print matrix_divided
+
+>>> matrix = [[]]
+>>> print(matrix_divided(matrix, 3))
+[[]]
+
+# Handling cases where one of the row is more than the other
+
+>>> matrix = [
+...    [4, 5, 6, 7],
+...    [8, 9, 10]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
