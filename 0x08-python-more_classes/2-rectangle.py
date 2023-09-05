@@ -2,15 +2,17 @@
 
 """ defines a rectangle """
 
+
 class Rectangle:
-    """
-    a class Rectangle that defines a rectangle
-    Args:
-        width and height
-    Raises:
-        ValueError and TypeError
-    """
+    """ a class Rectangle that defines a rectangle """
     def __init__(self, width=0, height=0):
+        """
+        Intitalizing the rectangle
+        Args:
+            width and height
+        Raises:
+            ValueError and TypeError
+        """
         self.__height = height
         self.__width = width
 
