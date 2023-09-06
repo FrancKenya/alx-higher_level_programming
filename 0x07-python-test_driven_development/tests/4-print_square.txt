@@ -1,0 +1,76 @@
+# Use of print_square function
+"""
+Usage:
+
+This function prints a square with #
+size: This is the height and width of the square
+
+"""
+
+# import function for testing
+
+>>> print_square = __import__('4-print_square').print_square
+
+# Handling integers > 0
+
+>>> print_square(2)
+##
+##
+
+>>> print_square(1)
+#
+
+>>> print_square(8)
+########
+########
+########
+########
+########
+########
+########
+########
+
+# Handling size being 0
+
+>>> print_square(0)
+
+# Handling non integers
+# Handling of a float
+
+>>> print_square(2.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Handling a string
+
+>>> print_square("name")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Handling negative integers
+
+>>> print_square(-2)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+# Handling negative floats
+
+>>> print_square(-2.5)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Handling a char character
+
+>>> print_square('c')
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+# Handling None
+
+>>> print_square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> print_square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'
