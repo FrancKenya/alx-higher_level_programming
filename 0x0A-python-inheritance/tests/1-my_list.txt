@@ -1,0 +1,14 @@
+# Test fot task 1 1-my_list.txt
+
+# import the function
+
+MyList = __import__('1-my_list') .MyList
+
+# handle empty list
+
+>>> a = []
+>>> my_list = MyList(a)
+>>> mylist.print_sorted()
+[]
+
+
