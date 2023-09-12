@@ -3,6 +3,9 @@
 """ Defines a function that writes an object """
 
 
+import json
+
+
 def save_to_json_file(my_obj, filename):
     """
     Fucntion using JSON to write an object
