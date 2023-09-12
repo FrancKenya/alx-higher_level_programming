@@ -13,5 +13,5 @@ def to_json_string(my_obj):
         my_obj: object serilaized
     Returns: JSON representation of an object
     """
-    my_obj-data = json.dumps(my_obj)
-    return (my_obj-data)
+    json_string_rep = json.dumps(my_obj)
+    return (json_string_rep)
