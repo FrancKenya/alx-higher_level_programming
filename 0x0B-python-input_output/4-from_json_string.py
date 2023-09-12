@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 """ defines a function that returns an object """
 
@@ -12,4 +12,5 @@ def from_json_string(my_str):
         my_str: string to be converted
     Returns: Converted string
     """
-    return (json.loads(my_str))
+    string_converted = json.loads(my_str)
+    return (string_converted)
