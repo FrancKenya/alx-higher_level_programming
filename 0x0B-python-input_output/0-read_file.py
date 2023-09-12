@@ -10,7 +10,7 @@ def read_file(filename=""):
         filename: File being read
     """
     try:
-        with open(filename, "r", encoding="utf-8") as file:
+        with open(filename, encoding="utf-8") as file:
             for content in file:
                 print(content, end="")
     except FileNotFoundError:
