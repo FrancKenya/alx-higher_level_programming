@@ -11,7 +11,7 @@ def read_file(filename=""):
     """
     try:
         with open(filename, "r", encoding="utf-8") as file:
-            filename_content = file.read()
-            print(filename_content)
+            for content in file:
+                print(content, end="")
     except FileNotFoundError:
         pass
