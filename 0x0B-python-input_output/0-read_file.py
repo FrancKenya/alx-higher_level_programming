@@ -9,9 +9,6 @@ def read_file(filename=""):
     Args:
         filename: File being read
     """
-    try:
-        with open(filename, encoding="utf-8") as file:
-            filename_content = file.read()
-            print(filename_content, end="")
-    except FileNotFoundError:
-        pass
+    with open(filename, encoding="utf-8") as file:
+        filename_content = file.read()
+        print(filename_content, end="")
