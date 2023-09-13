@@ -3,10 +3,10 @@
 """ defines a class """
 
 
-class MyList:
+class MyList(list):
     """ inherits from list """
 
     def print_sorted(self):
         """ prints the list, but sorted (ascending sort) """
-        sorted_final_list = sorted(self)
-        print(sorted_final_list)
+        sorted_list = sorted(self)
+        print(sorted_list)
