@@ -6,7 +6,7 @@
 
 # Import task 7 BaseGeometry
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('7-base_geometry') .BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -23,11 +23,3 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
-
-    def area(self):
-
-        """
-        Gets the area of the rectangle
-        Returns: area of the rectangle
-        """
-        return (self.__width * self.__height)
