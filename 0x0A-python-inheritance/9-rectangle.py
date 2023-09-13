@@ -7,7 +7,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """ The BaseGeometry rectangle represented """
-    def __init__(self, size):
+    def __init__(self, width, height):
         """ Intiliazes the rectangle
         Args:
             height: height of the new Rectangle
@@ -20,8 +20,11 @@ class Rectangle(BaseGeometry):
 
     def area(self):
         """ calculate the area of the rectangle """
-        return (self.__width * self.__height)
+        results = self.__width * self.__height
+        return (results)
 
     def __str__(self):
         """ str representation of the rectangle """
-        return (f"[Rectangle] {self.__width}/{self.__height}")
+        s = "[" + str(self.__class__.__name__) + "] "
+        s += str(self.__width) + "/" + str(self.__height)
+        return (s)
