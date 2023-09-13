@@ -7,7 +7,7 @@
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(BaseGeometry):
+class Square(Rectangle):
     """ Representation of the rectangle """
     def __init__(self, size):
         """
