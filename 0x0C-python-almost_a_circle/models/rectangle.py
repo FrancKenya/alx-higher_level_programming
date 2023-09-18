@@ -93,8 +93,11 @@ class Rectangle(Base):
         if self.height == 0 or self.width == 0:
             print("")
             return
-        for i in range(self.__height):
-            print("#" * self.__width)
+        [print("") for y in range(self.y)]
+        for ht in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for wt in range(self.width)]
+            print("")
 
     def __str__(self):
         """ Return a custon representation of sting rectangle """
