@@ -39,3 +39,9 @@ class Square(Rectangle):
         i = "[Square] ({}) {}/{} - {}".format(
                 self.id, self.x, self.y, self.width)
         return (i)
+
+    @size.setter
+    def size(self, value):
+        """ Validate size of the square"""
+        self.width = value
+        self.height = value
