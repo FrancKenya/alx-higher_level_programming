@@ -104,3 +104,25 @@ class Rectangle(Base):
         i = "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
         return (i)
+
+    def update(self, *args):
+        """
+        Update attributes using no-keyword arguments
+        Args:
+           1st argument: id attribute
+           2nd argument: width attribute
+           3rd argument: height attribute
+           4th argument: x attribute
+           5th argument: y attribute
+        """
+        num_args = len(args)
+        if num_args >= 1:
+            self.id = args[0]
+        if num_args >= 2:
+            self.width = args[1]
+        if num_args >= 3:
+            self.height = args[2]
+        if num_args >= 4:
+            self.x = args[3]
+        if num_args >= 5:
+            self.y = args[4]
