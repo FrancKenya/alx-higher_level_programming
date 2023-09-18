@@ -39,8 +39,9 @@ class Base:
             list_objs: list of Base instances
         """
         filename = cls.__name__ + ".json"
-        if list_objs is None:
-            list_objs = []
         with open(filename, "w") as jsonfile:
-            jsonfile.write(cls.to_json_string(
-                [obj.to_dictionary() for obj in list_objs]))
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                jsonfile.write(cls.to_json_string(
+                    [obj.to_dictionary() for obj in list_objs]))
