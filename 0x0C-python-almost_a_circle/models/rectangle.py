@@ -64,9 +64,9 @@ class Rectangle(Base):
     def x(self, value):
         """Set the x attribute """
         if not isinstance(value, int):
-            raise TypeError("X must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("X must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -78,7 +78,7 @@ class Rectangle(Base):
     def y(self, value):
         """Set the y attribute """
         if not isinstance(value, int):
-            raise TypeError("Y must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("Y must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
