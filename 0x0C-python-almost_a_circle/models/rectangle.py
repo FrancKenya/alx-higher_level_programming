@@ -95,3 +95,9 @@ class Rectangle(Base):
             return
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """ Return a custon representation of sting rectangle """
+        i = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height)
+        return (i)
