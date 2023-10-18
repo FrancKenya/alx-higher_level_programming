@@ -11,6 +11,7 @@ SELECT 1 FROM information_schema.tables WHERE table_name = 'states' LIMIT 1;
 
 -- create it if it does not exist
 CREATE TABLE IF NOT EXISTS states (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	name VARCHAR(256) NOT NULL
+	id INT UNIQUE NOT NULL AUTO_INCREMENT,
+	name VARCHAR(256) NOT NULL,
+	PRIMARY KEY(id)
 );
