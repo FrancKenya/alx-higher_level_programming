@@ -4,9 +4,12 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
-        username = sys.argv[1]
-        password = sys.argv[2]
-        database_name = sys.argv[3]
+    ldb = MySQLdb.connect(host="localhost", user=sys.argv[1],
+            passwd=sys.argv[2], ldb=sys.argv[3], port=3306)
+    cur = ldb.cursor()
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+        cur.close()
+        ldb.close()
