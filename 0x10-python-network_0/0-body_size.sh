@@ -5,4 +5,5 @@ if [ $# -ne 1 ]; then
 fi
 url=$1
 
-curl -s -o /dev/null -w "%{size_download}" "$url"
+size=$(curl -s -o /dev/null -w "%{size_download}" "$url")
+echo "$size"
