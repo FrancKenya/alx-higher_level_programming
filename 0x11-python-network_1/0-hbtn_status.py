@@ -12,11 +12,11 @@ def get_status():
     req = urllib.request.Request(url)
 
     with urllib.request.urlopen(req) as response:
-        the_page = response.read
-        content_decode = the_page.decode('utf-8')
+        body = response.read()
+        content_decode = body.decode('utf-8')
         print("Body response:")
-        print("\t- type:", type(the_page))
-        print("\t- content:", the_page)
+        print("\t- type:", type(body))
+        print("\t- content:", body)
         print("\t- utf8 content:", content_decode)
 
 
