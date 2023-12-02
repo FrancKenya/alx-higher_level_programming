@@ -17,9 +17,9 @@ def handle_http_error(url):
         with urllib.request.urlopen(req) as response:
             body = response.read()
             dec_body = body.decode('utf-8')
-            print(body)
+            print(dec_body)
     except urllib.error.HTTPError as err:
-        print("Error code:", err.code)
+        print(f"Error code: {err.code}")
 
 
 if __name__ == "__main__":
