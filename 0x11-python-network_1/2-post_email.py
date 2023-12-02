@@ -10,9 +10,9 @@ import sys
 
 
 def post_request(url, email):
-    data = urllib.parse.urlencode(email)
-    data = data.encode('utf-8')
-    req = urllib.request.Request(url, data=data, method='POST')
+    data = urllib.parse.urlencode({'email': email})
+    data = data.encode('ascii')
+    req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(req) as response:
         undecoded_body = response.read()
@@ -23,5 +23,4 @@ def post_request(url, email):
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
-
     post_request(url, email)
