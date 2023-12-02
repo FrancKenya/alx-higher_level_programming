@@ -12,9 +12,8 @@ import urllib.error
 
 
 def handle_http_error(url):
-    req = urllib.request.Request(url)
-
     try:
+        req = urllib.request.Request(url)
         with urllib.request.urlopen(req) as response:
             body = response.read()
             dec_body = body.decode('utf-8')
