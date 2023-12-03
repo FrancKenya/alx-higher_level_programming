@@ -8,17 +8,17 @@ import requests
 
 def commits_lists(repo, owner):
     url = f"https://api.github.com/repos/{owner}/{repo}/commits"
-    params = {'author': owner, 'page': 10}
+    params = {'author': owner, 'per_page': 10}
 
     response = requests.get(url, params=params)
     if response.status_code == 200:
         commits = response.json()
-        for i in commits:
+        for commit in commits:
             sha = commit['sha']
             author_name = commit['commit']['author']['name']
             print(f"{sha}: {author_name}")
-        else:
-            print(response.status_code)
+    else:
+        print(response.status_code)
 
 
 if __name__ == "__main__":
