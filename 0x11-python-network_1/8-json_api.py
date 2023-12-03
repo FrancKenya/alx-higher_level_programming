@@ -12,7 +12,7 @@ import requests
 def search_by_letter(letter):
     url = "http://0.0.0.0:5000/search_user"
     data = {'q': letter}
-    response = requests.post(url, data)
+    response = requests.post(url, data=data)
     json_response = response.json()
     if json_response:
         print("[{}] {}".format(json_response.get(
