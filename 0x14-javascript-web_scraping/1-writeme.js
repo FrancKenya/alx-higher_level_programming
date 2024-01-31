@@ -1,17 +1,14 @@
 #!/usr/bin/node
 
-const fs = require('fs');
-if (process.argv.length !== 4) {
-  console.error('Usage: node write-file.js <file-path> "<string-to-write>"');
-  process.exit(1);
-}
-const filePath = process.argv[2];
-const contentToWrite = process.argv[3];
+/*
+ * A script that writes a string to a file
+ */
 
-fs.writeFile(filePath, contentToWrite, 'utf-8', (err) => {
+const fs = require('fs');
+
+function callback (err, data) {
   if (err) {
-    console.error(err);
-  } else {
-    console.log('File written successfully!');
+    console.log(err);
   }
-});
+}
+fs.writeFile(process.argv[2], process.argv[3], 'utf8', callback);
