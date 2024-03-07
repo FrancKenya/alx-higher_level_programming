@@ -64,6 +64,8 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """ A static method that returns a rectangle with the larger area """
+
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
@@ -76,8 +78,10 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """ Class method that returns a square """
         return cls(size, size)
 
     def __del__(self):
+        """ Shows a message in stdout when del is called """
         type(self).number_of_instances -= 1  # decrementing instance count
         print("Bye rectangle...")
