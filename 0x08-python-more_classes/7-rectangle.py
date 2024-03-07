@@ -18,7 +18,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
 
     @property
     def height(self):
@@ -63,5 +63,5 @@ class Rectangle:
         return (f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
-        Rectangle.number_of_instances -= 1  # decrementing instance count
+        type(self).number_of_instances -= 1  # decrementing instance count
         print("Bye rectangle...")
