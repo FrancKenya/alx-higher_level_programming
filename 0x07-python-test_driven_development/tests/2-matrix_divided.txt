@@ -77,7 +77,8 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
 
-Testing integers
+# Testing integers
+
 >>> mat_1 = [
 ... [2, 4, 6],
 ... [10, 20, 40],
@@ -86,18 +87,20 @@ Testing integers
 >>> matrix_divided(mat_1, 2)
 [[1.0, 2.0, 3.0], [5.0, 10.0, 20.0], [25.0, 40.0, 45.0]]
 
-Handling ZeroDivisionError
+# Handling ZeroDivisionError
 
 >>> matrix_divided(mat_1, 0) #doctest: +REPORT_NDIFF
 Traceback (most recent call last):
 ZeroDivisionError: division by zero
 
-Handling division by a string
+# Handling division by a string
+
 >>> matrix_divided(mat_1, 'a')
 Traceback (most recent call last):
 TypeError: div must be a number
 
-Handling unequal rows
+# Handling unequal rows
+
 >>> mat_2 = [
 ...    [10, 10, 11, 40],
 ...    [12, 30],
@@ -107,7 +110,8 @@ Handling unequal rows
 Traceback (most recent call last):
 TypeError: Each row of the matrix must have the same size
 
-Handling strings in matrix
+# Handling strings in matrix
+
 >>> mat_3 = [
 ...    [10, 'aa', 11, 40],
 ...    [12, 30, 40, 50],
