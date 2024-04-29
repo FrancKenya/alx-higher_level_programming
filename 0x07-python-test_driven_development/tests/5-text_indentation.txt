@@ -1,0 +1,47 @@
+======================
+5-text_indentation.txt
+=======================
+
+This file contains the doctest for the ``5-string module``
+
+Dynamic module import
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing a float
+>>> text_indentation(5.5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+Testing a negative number
+>>> text_indentation(-5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+Testing a text with no ':, ?, .' characters
+>>> text_0 = "My name is francis waihiga"
+>>> text_indentation(text_0)
+My name is francis waihiga
+
+Testing a text with '.' character
+>>> text_1 = "My name is francis waihiga."
+>>> text_indentation(text_1)
+My name is francis waihiga.
+<BLANKLINE>
+
+Testing a text with all three of the characters(':', '?', '.')
+>>> text_3 = "My name is francis waihiga. I'm a software engineer proficient in the following languages: C, Python and Javascript. Is there any question you would like to ask me?"
+>>> text_indentation(text_3) #doctest: +NORMALIZE_WHITESPACE
+My name is francis waihiga.
+<BLANKLINE>
+I'm a software engineer proficient in the following languages:
+<BLANKLINE>
+C, Python and Javascript.
+<BLANKLINE>
+Is there any question you would like to ask me?
+<BLANKLINE>
+
+Testing an integer
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+
