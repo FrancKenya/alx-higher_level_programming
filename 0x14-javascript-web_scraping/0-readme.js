@@ -11,11 +11,11 @@ const filePath = process.argv[2];
 // Callback function to handle the file reading
 
 function recall (err, data) {
-	if (err) {
-		console.error(err); // Use console.error for error messages
-	} else {
-	    console.log(data.toString()); // Print the file content to stdout
-	}
+  if (err) {
+    console.error(err); // Use console.error for error messages
+  } else {
+    console.log(data.toString()); // Print the file content to stdout
+  }
 }
 // Read the file in utf-8 encoding
 fs.readFile(filePath, 'utf8', recall);
