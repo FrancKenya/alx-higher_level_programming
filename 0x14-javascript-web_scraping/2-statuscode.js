@@ -4,13 +4,10 @@
 
 const request = require('request');
 
-// Gets the URL from the command line arguments
-const url = process.argv[2];
-
 function reqRecall (error, response, body) {
-	if (!error) {
-            console.log(`code: ${response.statusCode}`);
-	}
+  if (!error) {
+    console.log(`code: ${response.statusCode}`);
+  }
 }
 
 request.get(process.argv[2], reqRecall);
