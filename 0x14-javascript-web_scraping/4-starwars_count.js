@@ -6,8 +6,8 @@ const request = require('request');
 
 function reqRecall (err, response, body) {
   if (!err) {
-    const rslt = JSON.parse(body).rslt;
-    console.log(rslt.reduce((count, movie) => {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
       return movie.characters.find((character) => character.endsWith('/18/'))
         ? count + 1
         : count;
